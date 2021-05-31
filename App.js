@@ -1,6 +1,6 @@
 import 'react-native-gesture-handler';
 import { StatusBar } from 'expo-status-bar';
-import React from 'react';
+import React, {useEffect}  from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 import { NavigationContainer } from "@react-navigation/native";
 import { createStackNavigator } from "@react-navigation/stack";
@@ -13,7 +13,6 @@ import Details from "./screens/Details";
 import Search from "./screens/Search";
 import Location from "./screens/Search";
 
-
 const Stack = createStackNavigator();
 const Tab = createBottomTabNavigator();
 
@@ -22,7 +21,7 @@ function HomeStack(){
     <Stack.Navigator
       initialRouteName="Home"
       screenOptions={{
-        //style
+        headerShown: false,
       }}
     >
       <Stack.Screen
@@ -82,19 +81,41 @@ function LocationStack(){
 }
 
 export default function App() {
+
   return (
     <NavigationContainer>
       <Tab.Navigator
         initialRouteName = "Home"
+        activeTintColor = ""
         tabBarOptions={{
-          activeTintColor: "yellow",
+          activeTintColor: "black",
+          style:{
+            flex: 0,
+            borderBottomColor: "blue",
+            height: 100,
+            backgroundColor: "white",
+            borderRadius: 25,
+            marginHorizontal: 20,
+            marginTop: 20,
+            marginBottom: 60,
+            padding: 20,
+            position: "relative",
+            borderWidth: 1,
+            borderColor: '#ddd',
+            borderBottomWidth: 0,
+            shadowColor: '#000000',
+            shadowOffset: { width: 2, height: 5 },
+            shadowOpacity: 0.2,
+            shadowRadius: 3,
+            elevation: 3,
+          }
         }}
       >
         <Tab.Screen 
           name="HomeStack"
           component={HomeStack}
           options={{
-            tabBarLabel:"Home",
+            tabBarLabel:"___________",
             tabBarIcon: ({ color, size }) => (
               <Feather name="home" size={30} color="black" />
             ),
@@ -104,7 +125,7 @@ export default function App() {
           name = "SearchStack" 
           component={SearchStack}
           options={{
-            tabBarLabel: 'Search',
+            tabBarLabel: '___________',
             tabBarIcon: ({ color, size }) => (
               <Feather name="search" size={30} color="black" />
             ),
@@ -114,7 +135,7 @@ export default function App() {
           name = "LocationStack" 
           component={LocationStack} 
           options={{
-            tabBarLabel: 'Location',
+            tabBarLabel: '___________',
             tabBarIcon: ({ color, size }) => (
               <Feather name="map-pin" size={30} color="black" />
             ),
