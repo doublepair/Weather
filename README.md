@@ -9,7 +9,7 @@ e avviare con
 
 >$ npm start
 
-Nel caso non ci possieda la Expo Cli: 
+Nel caso non si possieda la Expo Cli: 
 
 >$ npm install --global expo-cli
 
