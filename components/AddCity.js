@@ -7,7 +7,7 @@ const AddCity = () => {
     <TouchableOpacity>
     <View style={styles.addCity}>
       <Text style={styles.text}>
-        <Feather name="plus-square" size={30} color="rgb(13,30,93)"/> Add a place
+        <Feather name="plus-square" size={30} color="rgb(13,30,93)"/> Add place
       </Text>
     </View>
     </TouchableOpacity>

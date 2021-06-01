@@ -4,7 +4,8 @@ import { StyleSheet, Text, View, TouchableOpacity, SafeAreaView } from 'react-na
 import Greetings from "../components/Greetings";
 import AddCity from "../components/AddCity";
 import CityCard_1 from "../components/CityCard_1";
-import { Card } from 'react-native-elements/dist/card/Card';
+import CityCard_2 from "../components/CityCard_2";
+import CityCard_3 from "../components/CityCard_3";
 
 const Home = ({ navigation }) => {
     return (
@@ -13,8 +14,8 @@ const Home = ({ navigation }) => {
             <AddCity />
             <View style={styles.cardsContainer}>
                 <CityCard_1 />
-                <CityCard_1 />
-                <CityCard_1 /> 
+                <CityCard_2 />
+                <CityCard_3 /> 
             </View>
         </SafeAreaView>
     )
@@ -26,7 +27,8 @@ const styles = StyleSheet.create({
         backgroundColor: "white",
     }, 
     cardsContainer: {
-        flex:0,
+        flex: 0.1,
+        flexDirection: 'column',
         justifyContent: 'space-between'
     },
 })

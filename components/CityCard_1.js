@@ -13,9 +13,9 @@ const CityCard_1 = () =>  {
         <View style={styles.cardContent}>
           <View style={styles.cardContentLeft}>
             {/* replace */}
-            <Text style={styles.cityName}>Roma</Text> 
-            <Text style={styles.date}>Monday 20, June</Text>
-            <Text style={styles.hour}>9.00 pm</Text>
+            <Text style={styles.cityName}>London</Text> 
+            <Text style={styles.date}>Friday 20, september</Text>
+            <Text style={styles.hour}>2.38 pm</Text>
           </View>
           <View style={styles.cardContentCenter}>
             {/* replace */}
@@ -40,24 +40,34 @@ export default CityCard_1;
 const styles = StyleSheet.create({
   gradient:{
     borderRadius: 25,
-    height: 130,
+    height: 140,
   },
   card: {
     backgroundColor:"rgb(75,105,168)",
-    height: 130,
+    height: 140,
     borderRadius: 25,
     margin: 20,
+    borderWidth: 1,
+    borderColor: '#ddd',
+    borderBottomWidth: 0,
+    shadowColor: '#000000',
+    shadowOffset: { width: 2, height: 5 },
+    shadowOpacity: 0.2,
+    shadowRadius: 3,
+    elevation: 3,
   },
   cardContent: {
-    flex: 1,
+    display: "flex",
+    flexDirection: "row",
     margin: 20,
+    justifyContent: "space-between",
+    alignItems:"center",
   },
   cardContentLeft:{
     alignItems:'flex-start',
-    marginRight: 250,
+    maxWidth: 90,
   },
-  cardContentCenter:{
-    bottom: 80,
+  cardContentCenter:{ 
     alignItems:"center",
   },
   cardContentRight:{
@@ -77,5 +87,10 @@ const styles = StyleSheet.create({
     color: "#fff",
     fontWeight: "300",
     fontSize: 10,
+  },
+  temperature:{
+    color: "#fff",
+    fontSize: 45,
+    fontWeight: "800",
   },
 })
