@@ -21,7 +21,7 @@ function HomeStack(){
     <Stack.Navigator
       initialRouteName="Home"
       screenOptions={{
-        headerShown: false,
+        headerShown: true,
       }}
     >
       <Stack.Screen
@@ -29,13 +29,15 @@ function HomeStack(){
         component={Home}
         options={{
           title: "Home",
+          headerShown: false,
         }}
       />
       <Stack.Screen 
         name="Details"
         component={Details}
         options={{
-          //city cards
+          title: "Details",
+          headerShown: false, //custom header
         }}
       />
     </Stack.Navigator>
@@ -47,7 +49,7 @@ function SearchStack(){
     <Stack.Navigator
       initialRouteName="Search"
       screenOptions={{
-        //Style
+        //-------//
       }}
     >
       <Stack.Screen 
@@ -66,7 +68,7 @@ function LocationStack(){
     <Stack.Navigator
       initialRouteName="Location"
       screenOptions={{
-        //Style
+        //-------//
       }}
     >
       <Stack.Screen 
@@ -142,6 +144,7 @@ export default function App() {
           }}  
         />
       </Tab.Navigator>
+      <StatusBar style={"auto"} />
     </NavigationContainer>
   );
 }

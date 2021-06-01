@@ -1,5 +1,5 @@
 import React from 'react';
-import { StyleSheet, Text, View, TouchableOpacity, SafeAreaView } from 'react-native';
+import { StyleSheet, Text, View, TouchableOpacity, SafeAreaView, Touchable} from 'react-native';
 //my components 
 import Greetings from "../components/Greetings";
 import AddCity from "../components/AddCity";
@@ -13,9 +13,27 @@ const Home = ({ navigation }) => {
             <Greetings name={"Mario"} />
             <AddCity />
             <View style={styles.cardsContainer}>
-                <CityCard_1 />
-                <CityCard_2 />
-                <CityCard_3 /> 
+                <TouchableOpacity
+                onPress={
+                    () => navigation.navigate(
+                      'Details' 
+                )}>
+                    <CityCard_1 />
+                </TouchableOpacity>
+                <TouchableOpacity
+                onPress={
+                    () => navigation.navigate(
+                      'Details',
+                )}>
+                    <CityCard_2 />
+                </TouchableOpacity>
+                <TouchableOpacity 
+                onPress={
+                    () => navigation.navigate(
+                      'Details' 
+                )}>
+                    <CityCard_3 />
+                </TouchableOpacity>
             </View>
         </SafeAreaView>
     )

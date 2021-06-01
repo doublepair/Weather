@@ -4,7 +4,6 @@ import { LinearGradient } from 'expo-linear-gradient';
 
 const CityCard_2 = () =>  {
   return (
-    <TouchableOpacity>
       <View style={styles.card}>
       <LinearGradient
         colors={['rgba(255,255,255,0.5)', 'transparent']}
@@ -26,12 +25,11 @@ const CityCard_2 = () =>  {
           </View>
           <View style={styles.cardContentRight}>
             {/* replace */}
-            <Text style={styles.temperature}>20°</Text>
+            <Text style={styles.temperature}>22°</Text>
           </View>
         </View>
       </LinearGradient>
       </View>
-    </TouchableOpacity>
   );
 }
 
