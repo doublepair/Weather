@@ -9,9 +9,9 @@ e avviare con
 Nel caso non ci possieda la Expo Cli: 
 [!npm install --global expo-cli]
 
-![alt text](https://github.com/doublepair/Weather/tree/main/assets/screen_01.png?raw=true)
+![alt text](http://github.com/doublepair/Weather/tree/main/assets/screen_01.png?raw=true)
 
-![alt text](https://github.com/doublepair/Weather/tree/main/assets/screen_01.png?raw=true)
+![alt text](http://github.com/doublepair/Weather/tree/main/assets/screen_01.png?raw=true)
 
 In questo momento l'app è in uno stato "embrionale", presenta solo elementi statici da sostituire con quelli forniti dall'API.
 
