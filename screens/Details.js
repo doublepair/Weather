@@ -1,9 +1,10 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { StyleSheet, Text, View, TouchableOpacity, SafeAreaView, Image, ScrollView } from 'react-native';
 import { Feather } from "@expo/vector-icons";
 import DayCard from "../components/DayCard";
 
 const Details = ( { navigation } ) => {
+
     return (
         <SafeAreaView style={styles.container}>
             <View style={styles.header}>
@@ -23,7 +24,7 @@ const Details = ( { navigation } ) => {
             </View>
             <View style={styles.content}>
                 <Text style={styles.date}>
-                    Friday 18, september
+                    Friday 12, June
                 </Text>
                 <Text style={styles.forecast}>
                     Sunny
@@ -31,13 +32,13 @@ const Details = ( { navigation } ) => {
                 <View style={styles.temperature}>
                     <Image
                         style={{width:100, height: 100}}
-                        source={require("../assets/icon_TEST.png")}
+                        source={{ uri: `http://openweathermap.org/img/wn/10d.png` }}
                     />
                     <Text style={styles.temperatureText}>22°</Text>
                 </View>
                 <View style={styles.timeScroll}> 
                 <ScrollView
-                horizontal={true}
+                    horizontal={true}
                 >
                     <View style={styles.timeScrollElem}>
                         <Text>Now</Text>

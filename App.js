@@ -1,10 +1,12 @@
 import 'react-native-gesture-handler';
 import { StatusBar } from 'expo-status-bar';
-import React, {useEffect}  from 'react';
+import React, {useEffect, useState}  from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 import { NavigationContainer } from "@react-navigation/native";
 import { createStackNavigator } from "@react-navigation/stack";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
+import { Provider } from "react-redux"
+import store from "./redux/store"
 //nav icons
 import { Feather } from "@expo/vector-icons"
 //screens
@@ -85,6 +87,7 @@ function LocationStack(){
 export default function App() {
 
   return (
+    <Provider store={store}>
     <NavigationContainer>
       <Tab.Navigator
         initialRouteName = "Home"
@@ -146,6 +149,7 @@ export default function App() {
       </Tab.Navigator>
       <StatusBar style={"auto"} />
     </NavigationContainer>
+    </Provider>
   );
 }
 
