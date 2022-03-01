@@ -17,6 +17,6 @@ Nel caso non si possieda la Expo Cli:
 
 ![alt text](https://github.com/doublepair/Weather/blob/main/assets/screen_02.png)
 
-In questo momento l'app è in uno stato "embrionale", presenta solo elementi statici da sostituire con quelli forniti dall'API.
+
 
 
